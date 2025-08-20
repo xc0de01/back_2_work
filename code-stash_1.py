@@ -12,13 +12,15 @@ class TemperatureConverter:
     units = {
         'Celsius': '*C',
         'Fahrenheit': '*F',
-        'Kelvin': '*K'
+        'Kelvin': '*K',
+        'Rankine': '*R'
     }
 
     abbreviations = {
         'C': 'Celsius',
         'F': 'Fahrenheit',
-        'K': 'Kelvin'
+        'K': 'Kelvin',
+        'R': 'Rankine'
     }
 
     log_file = "temperature_log.txt"
@@ -31,7 +33,7 @@ class TemperatureConverter:
     def from_input(cls):
         while True:
             try:
-                unit_input = input("Enter temperature unit (C, F, K or full name): ").strip().title()
+                unit_input = input("Enter temperature unit (C, F, K, R or full name): ").strip().title()
 
                 if len(unit_input) == 1:
                     unit_input = unit_input.upper()
